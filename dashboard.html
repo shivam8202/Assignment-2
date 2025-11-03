@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Stock Broker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+
+    
+    <header class="dashboard-header">
+      <div class="header-left">
+        <h2>📊 Stock Broker Dashboard</h2>
+      </div>
+      <div class="header-right">
+        <span id="userEmail"></span>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+   
+    <section class="stock-selection">
+      <h3>Select Stocks to Track</h3>
+      <div class="checkbox-group" id="stockCheckboxes">
+       
+      </div>
+      <div class="hint muted">Tip: choose one or more stocks. Prices update automatically every 2 seconds.</div>
+    </section>
+
+    
+    <section class="stock-table-section">
+      <h3>Live Stock Updates</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Stock</th>
+            <th>Price (USD)</th>
+          </tr>
+        </thead>
+        <tbody id="stockTableBody"></tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
