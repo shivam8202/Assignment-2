@@ -31,7 +31,7 @@ A **Stock Broker Dashboard** built with **HTML, CSS, and JavaScript** that inclu
 ---
 
 ## 📂 Folder Structure
-
+```
 Assignment-2/
 │
 ├── index.html          → Login Page
@@ -42,7 +42,7 @@ Assignment-2/
 ├── script.js           → Core Logic (login, register, stock updates, limit to 5 stocks)
 │
 └── README.md           → Documentation and setup instructions
-
+```
 
 
 ## 🧑‍💻 How to Run the Project
