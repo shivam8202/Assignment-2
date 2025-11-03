@@ -32,14 +32,15 @@ A **Stock Broker Dashboard** built with **HTML, CSS, and JavaScript** that inclu
 
 ## 📂 Folder Structure
 
-Assignment-2/
+Assignment-1/
+├──  index.html        # Login Page
+├──  dashboard.html    # Dashboard displaying transaction details
 │
-├── index.html → Login page
-├── register.html → Registration page
-├── dashboard.html → Dashboard with stock updates
-├── style.css → Styling
-├── script.js → Core logic (login, register, stock updates)
-└── README.md → Documentation
+├──  style.css         # Styling for layout and responsiveness
+├──   script.js         # Core Logic (login validation, dashboard data updates)
+│
+└──  README.md         # Documentation and setup instructions
+
 
 ## 🧑‍💻 How to Run the Project
 
