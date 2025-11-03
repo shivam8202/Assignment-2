@@ -34,8 +34,8 @@ A **Stock Broker Dashboard** built with **HTML, CSS, and JavaScript** that inclu
 
 Assignment-2/
 │
-├── index.html          → Login Page.
-├── register.html       → Registration Page.
+├── index.html          → Login Page
+├── register.html       → Registration Page
 ├── dashboard.html      → Dashboard with stock updates
 │
 ├── style.css           → Styling (layout, dashboard UI, responsive design)
