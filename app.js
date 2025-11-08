@@ -1,7 +1,7 @@
 const socket = io();
 let userEmail = "";
 
-// Toggle between login and register
+
 function toggleAuth(mode) {
   if (mode === "register") {
     document.getElementById("loginForm").classList.add("hidden");
@@ -14,7 +14,7 @@ function toggleAuth(mode) {
   }
 }
 
-// ---------------- Auth ----------------
+
 async function registerUser() {
   const email = document.getElementById("regEmail").value;
   const password = document.getElementById("regPass").value;
@@ -53,7 +53,7 @@ function logout() {
   toggleAuth("login");
 }
 
-// ---------------- Subscribe ----------------
+
 async function subscribeStock() {
   const stock = document.getElementById("stockSelect").value;
   if (!stock) return alert("Select a stock!");
@@ -74,7 +74,7 @@ async function subscribeStock() {
   }
 }
 
-// ---------------- Stock Updates ----------------
+
 socket.on("stock-update", (prices) => {
   const list = document.getElementById("subscribedList");
   Array.from(list.children).forEach(div => {
@@ -83,7 +83,7 @@ socket.on("stock-update", (prices) => {
   });
 });
 
-// ---------------- UI Helpers ----------------
+
 function renderSubscribed(stocks) {
   const list = document.getElementById("subscribedList");
   list.innerHTML = "";
@@ -94,3 +94,4 @@ function renderSubscribed(stocks) {
     list.appendChild(div);
   });
 }
+
