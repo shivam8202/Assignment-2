@@ -10,23 +10,33 @@ A **Stock Broker Dashboard** built with **HTML, CSS, and JavaScript** that inclu
 
 ## 🚀 Features
 
-✅ Email + Password Registration and Login  
-✅ Live Stock Price Updates every 2 seconds  
-✅ Subscribe/Unsubscribe stocks (max 5 per user)  
-✅ User info displayed in top right corner  
-✅ Logout clears session and redirects to Login  
-✅ Fully responsive layout for all screens  
+🔐 Register & Login using email and password.
+
+👥 Multiple users supported simultaneously.
+
+📈 Subscribe up to 5 stocks per user.
+
+⚡ Real-time stock updates every second using WebSockets.
+
+🌐 Live asynchronous updates (no refresh needed).
+
+🎨 Modern dashboard UI with clean styling.
+
+🚪 Logout option to end session securely.
+
+🔁 Dynamic price simulation (random price updates per stock).
 
 ---
 
 ## 🧰 Tech Stack
 
-| Technology | Purpose |
-|-------------|----------|
-| **HTML5** | Structure |
-| **CSS3** | Styling and layout |
-| **JavaScript (ES6)** | Logic and interactivity |
-| **LocalStorage** | Storing user session and subscribed stocks |
+| Layer                       | Technology              |
+| :-------------------------- | :---------------------- |
+| **Frontend**                | HTML5, CSS3, JavaScript |
+| **Backend**                 | Node.js (Express)       |
+| **Real-time Communication** | Socket.io               |
+| **Cross-Origin Access**     | CORS Enabled            |
+
 
 ---
 
@@ -34,68 +44,67 @@ A **Stock Broker Dashboard** built with **HTML, CSS, and JavaScript** that inclu
 ```
 Assignment-2/
 │
-├── index.html          → Login Page
-├── register.html       → Registration Page
-├── dashboard.html      → Dashboard with stock updates
+├── server.js                # Node.js backend (Express + Socket.io)
+├── package.json             # Project dependencies
 │
-├── style.css           → Styling (layout, dashboard UI, responsive design)
-├── script.js           → Core Logic (login, register, stock updates, limit to 5 stocks)
+├── public/
+│   ├── index.html           # Login / Register page
+│   ├── dashboard.html       # User dashboard (stock display)
+│   ├── style.css            # Styling for both pages
+│   ├── login.js             # Handles registration & login
+│   └── dashboard.js         # Manages real-time updates & subscriptions
 │
-└── README.md           → Documentation and setup instructions
+├── assets/
+│   └── logo.png             # Project logo used on the dashboard
+│
+└── README.md                # Documentation
+
 ```
 
 
 ## 🧑‍💻 How to Run the Project
 
-### ✅ Option 1 — Run Normally in VS Code (Recommended)
-1. Open **VS Code**.  
-2. Open the folder:  
-   Assignment-2/
-   3. Right-click on **`index.html`** → click **“Open with Live Server”**.  
-4. Browser will open with the **Login Page**.  
-5. You can:
-- **Register a new user**, or  
-- **Login** using:
-  ```
-  Email: admin@example.com
-  Password: admin123
-  ```
-6. After login, you’ll be redirected to the **Dashboard**.  
-7. Check/uncheck stock boxes to subscribe (max 5 allowed).  
-8. Prices auto-update every 2 seconds.  
-9. Click **Logout** to end the session.
-
-> 💡 If you don’t have Live Server, install it via VS Code Extensions.
-
----
-
-### 🖥️ Option 2 — Without Live Server
-1. Open the folder.  
-2. Double-click **`index.html`** to open in your browser.  
-3. Everything works locally, including login/register via `localStorage`.
-
+1. Open VS Code or any terminal window.
+2. Navigate to your project folder:
+   cd Assignment-2
+3. Install dependencies (only needed once):
+   npm install
+4. Start the backend server:
+5. node server.js
+   Open your browser and visit:
+   http://localhost:4000
+6. You’ll see the login page.
 ---
 
 ## ⚙️ Key Functionalities
 
-- **Register Page**: Add new user credentials (saved in localStorage).  
-- **Login Page**: Authenticate user before entering dashboard.  
-- **Dashboard**:
-- Displays all stocks with checkboxes.  
-- Allows up to 5 active subscriptions.  
-- Prices update dynamically using random generation.  
-- Displays logged-in user info at top-right.  
-- **Logout**: Clears session and redirects to login page.
+🔐 Register & Login with email and password.
 
+👥 Multiple users supported at the same time.
+
+📈 Subscribe up to 5 stocks per user.
+
+⚡ Real-time stock updates every second using WebSockets.
+
+🌐 Live asynchronous updates — no page reloads.
+
+🎨 Modern dashboard UI with clean design.
+
+🚪 Logout option to end session securely.
+
+🔁 Simulated stock price updates every second.
 ---
 
 ## 🧠 How It Works
 
-1. Registration stores email and password in `localStorage`.  
-2. On login, user data is validated and a session is created.  
-3. The dashboard fetches session info, generates random stock prices, and updates them every 2 seconds.  
-4. Subscription limit (5) is enforced via JavaScript.  
-5. Logout removes session and navigates back to the login screen.
+1. Users register or log in using email and password. 
+2. Once logged in, users are redirected to the dashboard.  
+3. On the dashboard:
+   They can subscribe to up to 5 stocks (GOOG, TSLA, AMZN, META, NVDA).
+   Subscribed stocks display current simulated prices. 
+4. Every second, the server sends new random stock prices using Socket.io events.  
+5. All connected users receive real-time updates instantly — asynchronously.
+6. Clicking Logout clears user data and redirects to login page.
 
 ---
 
