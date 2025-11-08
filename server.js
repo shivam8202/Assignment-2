@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-// ----------------- Mock Database -----------------
-let users = {}; // { email: { password, subscribed: [] } }
+
+let users = {}; 
 const stocks = ["GOOG", "TSLA", "AMZN", "META", "NVDA"];
 let stockPrices = {};
 stocks.forEach(s => stockPrices[s] = randomPrice());
@@ -21,7 +21,7 @@ function randomPrice() {
   return (Math.random() * 1000 + 100).toFixed(2);
 }
 
-// ----------------- Auth Routes -----------------
+
 app.post("/api/register", (req, res) => {
   const { email, password } = req.body;
   if (users[email]) return res.status(400).json({ msg: "User already exists" });
@@ -51,14 +51,14 @@ app.post("/api/subscribe", (req, res) => {
   res.json({ msg: "Subscribed", subscribed: user.subscribed });
 });
 
-// ----------------- Socket.io -----------------
+
 io.on("connection", (socket) => {
   console.log("Client connected");
   socket.on("register-user", (email) => (socket.email = email));
   socket.on("disconnect", () => console.log("Client disconnected"));
 });
 
-// ----------------- Stock Price Updater -----------------
+
 setInterval(() => {
   stocks.forEach(s => (stockPrices[s] = randomPrice()));
   io.emit("stock-update", stockPrices);
@@ -68,3 +68,4 @@ const PORT = process.env.PORT || 4000;
 server.listen(PORT, () =>
   console.log(`✅ Server running on http://localhost:${PORT}`)
 );
+
