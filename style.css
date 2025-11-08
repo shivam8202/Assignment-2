@@ -8,7 +8,7 @@ body {
   height: 100vh;
 }
 
-/* ---------- Auth Box ---------- */
+
 .card {
   background: white;
   padding: 2rem;
@@ -50,7 +50,7 @@ button:hover {
   text-decoration: none;
 }
 
-/* ---------- Dashboard ---------- */
+
 .dashboard {
   background: white;
   width: 80%;
@@ -106,3 +106,4 @@ header {
   color: red;
   font-size: 0.9em;
 }
+
