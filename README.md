@@ -63,7 +63,7 @@ Assignment-2/
 
 
 ## 🧑‍💻 How to Run the Project
-
+```
 1️⃣ Download the Project
     Go to the GitHub repository and click:
     Code → Download ZIP
@@ -86,6 +86,7 @@ This will start your Node.js server.
 
 7️⃣ Open the Dashboard
     Open your browser and go to: http://localhost:4000
+```
 ---
 
 ## ⚙️ Key Functionalities
