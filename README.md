@@ -64,16 +64,28 @@ Assignment-2/
 
 ## 🧑‍💻 How to Run the Project
 
-1. Open VS Code or any terminal window.
-2. Navigate to your project folder:
-   cd Assignment-2
-3. Install dependencies (only needed once):
-   npm install
-4. Start the backend server:
-5. node server.js
-   Open your browser and visit:
-   http://localhost:4000
-6. You’ll see the login page.
+1️⃣ Download the Project
+    Go to the GitHub repository and click:
+    Code → Download ZIP
+
+2️⃣ Extract the ZIP File
+    Unzip the downloaded file on your system.
+
+3️⃣ Open the Project Folder
+    Open the extracted folder in VS Code or any editor.
+
+4️⃣ Open Terminal in the Project Directory
+Make sure you are inside the root project folder (where server.js exists).
+
+5️⃣ Install Dependencies
+    Run: npm install
+
+6️⃣ Start the Server
+    Run: npm start
+This will start your Node.js server.
+
+7️⃣ Open the Dashboard
+    Open your browser and go to: http://localhost:4000
 ---
 
 ## ⚙️ Key Functionalities
